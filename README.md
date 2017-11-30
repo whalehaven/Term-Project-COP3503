@@ -3,9 +3,9 @@ Project group 34 - Natural Language Processing
 <h1> Hi everyone! </h1>
 <h2> Full list of classes:
 <ol>
-  <li> Builder(main) </li>
+  <li> Builder(main) &#10004</li>
   <li> Sentence (with SentenceList linked list) </li>
-  <li> Word (with WordList and WordBank linked lists) </li>
+  <li> Word (with WordList and WordBank linked lists) &#10004</li>
   <li> FunctionWord (and following subclasses):
     <ul>
       <li> Conjunction </li>
