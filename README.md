@@ -1,7 +1,6 @@
 # Term-Project-COP3503
 Project group 34 - Natural Language Processing
-## Hi everyone!  
-/play loggins
+## Hi everyone!
 **The program now compliles and builds.** Use the command:  
 
 `g++ -o main -Wall -std=c++11 builder.cpp controller.cpp word.cpp`    
