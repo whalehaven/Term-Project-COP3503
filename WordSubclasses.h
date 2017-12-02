@@ -5,7 +5,6 @@
 #ifndef PROJECT_WORDSUBCLASSES_H
 #define PROJECT_WORDSUBCLASSES_H
 
-#include <iostream>
 #include <string>
 
 class Noun:public word{
