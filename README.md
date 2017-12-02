@@ -12,9 +12,9 @@ to create a file named "main" and run it with
 This only works on a Unix system.
 
 ### Full list of classes:
-1. Builder(main) 
-2. Controller 
-3. Word (with WordList and WordBank linked lists) 
+1. Builder(main) :heavy_check_mark:
+2. Controller :heavy_check_mark:
+3. Word (with WordList and WordBank linked lists) :heavy_check_mark:
 4. FunctionWord (and following subclasses):
    - Conjunction 
    - Preposition 
