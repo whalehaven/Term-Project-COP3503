@@ -145,40 +145,4 @@ controller::printSentence()
 
   
 
-int
-main()
-{
-
-  word *firstword = new word( "noun", "the cat" );
-  word *secondword = new word( "verb", "drank" );
-  word *thirdword = new word( "noun", "water" );
-
-  controller *wordBank = new controller();
-  
-  wordBank->addWord( firstword );
-  wordBank->addWord( secondword );
-  wordBank->addWord( thirdword );
-
-  std::cout << "--toString called--\n" << std::endl;
-  wordBank->toString();
-  std::cout << "\n--printSentence called--\n" << std::endl;
-  wordBank->printSentence();
-
-  wordBank->deleteWord( thirdword );
-  std::cout << "\n--Deleting thirdword--" << std::endl;
-
-  std::cout << "\n--toString called--\n" << std::endl;
-  wordBank->toString();
-  std::cout << "\n--printSentence called--\n" << std::endl;
-  wordBank->printSentence();
-
-  delete firstword;
-  delete secondword;
-  delete thirdword;
-  
-  
-
-  
-  
-}
 
