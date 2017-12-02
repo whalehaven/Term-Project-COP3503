@@ -1,39 +1,22 @@
+/* 
+   Both word.cpp and word.h are simple, only having 2 members. Both members
+   are of type string. When creating a word, the explicit constructor must be 
+   called. word has a getter function that returns the caller's typeOfword.
+ */
 #include "word.h"
 
-word::word( std::string typeOfWord )
+//explicit word constructor (must call explicit constructor)
+word::word( std::string typeOfWord, std::string content )
 {
   this->typeOfWord = typeOfWord;
+  this->content = content;
 }
 
+//returns a given word's type of word
 std::string
 word::getTypeOfWord()
 {
   return this->typeOfWord;
 }
 
-void
-word::addWord( std::string typeOfWord, std::string content )
-{
-  wordList *n = new wordList();
-  word *newWord = new word( typeOfWord, content );
-  n->content = newWord->typeOfWord;
-  
-  if ( head == nullptr && tail == nullptr )
-    {
-      n->next = nullptr;
-      head = n;
-      tail = n;
-    }
 
-  else
-    {
-      tail->next = n;
-      tail = n;
-      tail->next = nullptr;
-    }
-}
-
-int
-main()
-{}
-  
