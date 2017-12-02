@@ -6,7 +6,8 @@
 //Zachary Tsarnas
 //Group Project
 #include "builder.h"
-#include "controller."
+#include "controller.h"
+#include <iostream>
 
 using namespace std;
 const int GENERATE_SENTENCE = 1;
