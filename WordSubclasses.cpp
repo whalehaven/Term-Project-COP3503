@@ -3,7 +3,6 @@
 //
 
 #include "WordSubclasses.h"
-#include <iostream>
 #include <string>
 
 std::string Noun::makeNounPlural(string noun){
