@@ -11,29 +11,20 @@ to create a file named "main" and run it with
 
 This only works on a Unix system.
 
-<h2> Full list of classes:
-<ol>
-  <li> Builder(main) &#10004</li>
-  <li> Controller &#10004</li>
-  <li> Word (with WordList and WordBank linked lists) &#10004</li>
-  <li> FunctionWord (and following subclasses):
-    <ul>
-      <li> Conjunction </li>
-      <li> Preposition </li>
-    </ul>
-  </li>
-  <li> ContentWord (and following subclasses):
-    <ul>
-      <li> Noun </li>
-      <li> Verb </li>
-      <li> Adjective </li>
-      <li> Adverb </li>
-    </ul>
-  </li>
-</ol>
-</h2>
+### Full list of classes:
+1. Builder(main) 
+2. Controller 
+3. Word (with WordList and WordBank linked lists) 
+4. FunctionWord (and following subclasses):
+   - Conjunction 
+   - Preposition 
+5. ContentWord (and following subclasses):
+   - Noun
+   - Verb
+   - Adjective
+   - Adverb
 
-<h3> All classes should have both .cpp and .h files, with delcarations in the header and implementations in the cpp file. Once all classes have been created, we will schedule a full group meet up to determine how inheritance should be organized and to debug/fix errors (probably friday or saturday). Let's continue to be in discord in case anyone needs help.   
+#### All classes should have both .cpp and .h files, with delcarations in the header and implementations in the cpp file. Once all classes have been created, we will schedule a full group meet up to determine how inheritance should be organized and to debug/fix errors (probably friday or saturday). Let's continue to be in discord in case anyone needs help.   
       
       
 
