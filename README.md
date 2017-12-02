@@ -1,6 +1,16 @@
 # Term-Project-COP3503
 Project group 34 - Natural Language Processing
-<h1> Hi everyone! </h1>
+## Hi everyone!
+**The program now compliles and builds.** Use the command:  
+
+`g++ -o main -Wall -std=c++11 builder.cpp controller.cpp word.cpp`    
+
+to create a file named "main" and run it with    
+
+`./main`    
+
+This only works on a Unix system.
+
 <h2> Full list of classes:
 <ol>
   <li> Builder(main) &#10004</li>
