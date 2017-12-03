@@ -2,7 +2,7 @@
 //Myra Kurosu Jalil
 //Alexander Scardina
 //Winton Liu
-//Abigail Halem
+//Abbigail Halem
 //Zachary Tsarnas
 //Group Project
 #include "builder.h"
