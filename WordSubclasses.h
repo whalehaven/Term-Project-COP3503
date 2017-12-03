@@ -14,12 +14,6 @@ public:
     std::string makeNounPlural(std::string noun);
 };
 
-class ProperNoun:public word{
-public:
-    ProperNoun(std::string typeOfWord,std::string content):word(typeOfWord,content){}
-
-};
-
 class Verb:public word{
 public:
     Verb(std::string typeOfWord,std::string content):word(typeOfWord,content){}
@@ -45,11 +39,6 @@ public:
 class Preposition:public word{
 public:
     Preposition(std::string typeOfWord,std::string content):word(typeOfWord,content){}
-};
-
-class Article:public word{
-public:
-    Article(std::string typeOfWord,std::string content):word(typeOfWord,content){}
 };
 
 #endif //PROJECT_WORDSUBCLASSES_H
