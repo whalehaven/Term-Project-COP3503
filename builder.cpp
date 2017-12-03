@@ -156,7 +156,7 @@ int main() {
       cin.ignore();
       cout << "\nKnock knock.";
       cin.ignore();
-      cout << "\nWho's there?";
+      cout << "Who's there?";
       cin.ignore();
       cout << punchline; //outputs noun that was found
       cin.ignore();
