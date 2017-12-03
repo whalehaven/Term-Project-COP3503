@@ -7,6 +7,8 @@
 //Group Project
 #include <iostream>
 #include <climits>
+#include <cstdlib>
+#include <ctime>
 
 int menu();
 
