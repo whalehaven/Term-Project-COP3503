@@ -3,7 +3,7 @@ Project group 34 - Natural Language Processing
 ## Hi everyone!
 **The program now compliles and builds.** Use the command:  
 
-`g++ -o main -Wall -std=c++11 builder.cpp controller.cpp word.cpp `    
+`g++ -o main -Wall -std=c++11 builder.cpp controller.cpp word.cpp WordSubclassess.cpp`    
 
 to create a file named "main" and run it with    
 
@@ -23,7 +23,6 @@ This only works on a Unix system.
    - Verb :heavy_check_mark:
    - Adjective :heavy_check_mark:
    - Adverb :heavy_check_mark:
-   -  Article :heavy_check_mark:
 
 #### All classes should have both .cpp and .h files, with delcarations in the header and implementations in the cpp file. Once all classes have been created, we will schedule a full group meet up to determine how inheritance should be organized and to debug/fix errors (probably friday or saturday). Let's continue to be in discord in case anyone needs help.   
       
