@@ -5,9 +5,6 @@
   list implementation. The controller lists will be used as word banks,
   constituents pairs, full sentences etc.
  */
-f
-f
-f
 
 #ifndef WORD_H_
 #define WORD_H_
