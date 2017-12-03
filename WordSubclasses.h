@@ -1,54 +1,55 @@
-//
-// Created by myraj on 12/2/2017.
-//
+/*
+ * comments here
+ */
 
 #ifndef PROJECT_WORDSUBCLASSES_H
 #define PROJECT_WORDSUBCLASSES_H
 
 #include <string>
+#include "word.h"
 
 class Noun:public word{
 public:
-    Noun():word(typeOfName,content){}
-    std::string makeNounPlural(string noun);
+    Noun(std::string typeOfWord,std::string content):word(typeOfWord,content){}
+    std::string makeNounPlural(std::string noun);
 };
 
 class ProperNoun:public word{
 public:
-    ProperNoun():word(typeOfName,content){}
+    ProperNoun(std::string typeOfWord,std::string content):word(typeOfWord,content){}
 
 };
 
 class Verb:public word{
 public:
-    Verb():word(typeOfName,content){}
-    std::string makeVerbPast(string verb);
-    std::string makeVerbPastWithVowel(string verb);
+    Verb(std::string typeOfWord,std::string content):word(typeOfWord,content){}
+    std::string makeVerbPast(std::string verb);
+    std::string makeVerbPastWithVowel(std::string verb);
 };
 
 class Adjective:public word{
 public:
-    Adjective():word(typeOfName,content){}
+    Adjective(std::string typeOfWord,std::string content):word(typeOfWord,content){}
 };
 
 class Adverb:public word{
 public:
-    Adverb():word(typeOfName,content){}
+    Adverb(std::string typeOfWord,std::string content):word(typeOfWord,content){}
 };
 
 class Conjunction:public word{
 public:
-    Conjunction():word(typeOfName,content){}
+    Conjunction(std::string typeOfWord,std::string content):word(typeOfWord,content){}
 };
 
 class Preposition:public word{
 public:
-    Preposition():word(typeOfName,content){}
+    Preposition(std::string typeOfWord,std::string content):word(typeOfWord,content){}
 };
 
 class Article:public word{
 public:
-    Article():word(typeOfName,content){}
+    Article(std::string typeOfWord,std::string content):word(typeOfWord,content){}
 };
 
 #endif //PROJECT_WORDSUBCLASSES_H
