@@ -18,10 +18,11 @@ This only works on a Unix system.
 4. Conjunction 
 5. Preposition 
 6. Noun
-7. Verb
-8. Adjective
-9. Adverb
-10. Article
+7. Proper Noun
+8. Verb
+9. Adjective
+10. Adverb
+11. Article
 
 #### All classes should have both .cpp and .h files, with delcarations in the header and implementations in the cpp file. Once all classes have been created, we will schedule a full group meet up to determine how inheritance should be organized and to debug/fix errors (probably friday or saturday). Let's continue to be in discord in case anyone needs help.   
       
