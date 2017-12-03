@@ -1,3 +1,9 @@
+/*
+*
+*to be added to builder.cpp once finished
+*
+*/
+
 createSentence(numNoun, numAdj, numVerb, numAdv) {
 	//initializes counters for the parts of speech
 	int nounCount = 0;
