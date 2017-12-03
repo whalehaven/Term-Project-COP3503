@@ -59,7 +59,7 @@ int main() {
 	string word5="";
 	string word6="";
 
-	if (madchoice == 1) {
+	if (madchoice == 1) { //series of questions for holiday mad lib
 	  cout << "\nPlease enter a place: ";
 	  cin >> word1;
 	  cout << "Please enter a noun: ";
@@ -72,7 +72,8 @@ int main() {
 	  cin >> word5;
 	  cout << "Please enter another adjective: ";
 	  cin >> word6;
-
+		
+	  //prints holiday madlib with user inputs
 	  cout << "\nYour Holiday Mad Lib";
 	  cout << "\n--------------------";
 	  cout << "\nIn the " << word1 << " we can build a " << word2;
@@ -86,7 +87,7 @@ int main() {
 	  cout << "\nWalking in a " << word6 << " wonderland\n";
         }
 
-	else if (madchoice == 2){
+	else if (madchoice == 2){ //series of questions for uf mad lib
           cout << "\nPlease enter an adjective: ";
 	  cin >> word1;
 	  cout << "Please enter a body part: ";
@@ -99,7 +100,8 @@ int main() {
 	  cin >> word5;
 	  cout << "Please enter a name: ";
 	  cin >> word6;
-
+		
+	  //prints uf madlib with user inputs
           cout << "\nYour UF Mad Lib";
 	  cout << "\n---------------";
 	  cout << "\nDear prof Fuchs,"; 
@@ -111,7 +113,7 @@ int main() {
 	  cout << "\n" << word6 << "\n";
 	}
 	
-        else if (madchoice == 3){
+        else if (madchoice == 3){ //series of questions for mystery mad lib
 	  cout << "\nPlease enter a name: ";
 	  cin >> word1;
 	  cout << "Please enter another name: ";
@@ -125,7 +127,7 @@ int main() {
 	  cout << "Please enter a drink: ";
 	  cin >> word6;
 
-	  
+	  //prints mystery madlib with user inputs
 	  cout << "\nYour Mystery Mad Lib";
 	  cout << "\n--------------------";
 	  cout << "\nHello. My name is Detective " << word1 << ". Supposedly, somebody stole the";
@@ -135,13 +137,13 @@ int main() {
 	  cout << "\nbecause he had an injured costumer.\n";
 	}
 
-	else if (madchoice > 3 || madchoice < 1){
+	else if (madchoice > 3 || madchoice < 1){ //if the input is invalid, the input is cleared and the user is asked to give input again 
           cout << "\nPlease enter a valid number";
 	  cin >> madchoice;
 	}
       }
 	
-      else if (choice > 2 || choice < 1) {
+      else if (choice > 2 || choice < 1) { //if the input is invalid, the input is cleared and the user is asked to give input again
 	cout << "\nPlease enter a valid number";
 	cin >> choice;
       }
@@ -149,18 +151,18 @@ int main() {
 
     case KNOCK_KNOCK:
       {
-      string punchline = wordBank->findTypeOfWord( "noun" )->content;
+      string punchline = wordBank->findTypeOfWord( "noun" )->content; //finds noun from word bank
       cout << "\nWelcome to the Knock Knock Joke. Please press enter to continue after each statement.";
       cin.ignore();
       cout << "\nKnock knock.";
       cin.ignore();
       cout << "\nWho's there?";
       cin.ignore();
-      cout << punchline;
+      cout << punchline; //outputs noun that was found
       cin.ignore();
-      cout << punchline << " who";
+      cout << punchline << " who?"; 
       cin.ignore();
-      cout << wordBank->findTypeOfWord( "adjective" )->content << " " <<  punchline << std::endl; //adj + noun
+      cout << wordBank->findTypeOfWord( "adjective" )->content << " " <<  punchline << "." << std::endl; //finds and outputs adjective from word bank
       break;
       //break;
       }
