@@ -8,6 +8,8 @@
 #include "builder.h"
 #include "controller.h"
 #include <iostream>
+#include <sstream>
+#include <fstream>
 
 using namespace std;
 const int GENERATE_SENTENCE = 1;
@@ -17,37 +19,16 @@ const int EXIT = 4;
 
 int main() {
   int choice = 0; //an int is created to store the value of the menu function
-  do { //a do-while loop is created to run the menu function on loop
+  controller *wordBank = new controller();
+  ifstream file( "word.txt" );
+  wordBank->makeWordBank( file );
+   
+  do { //a do-while loop is created to run the menu function on loop 
     choice = menu(); //the choice int stores the value of the menu function
     switch(choice) { //a switch statement is generated that uses the int choice
     case GENERATE_SENTENCE:
       {
-	word *firstword = new word( "noun", "the cat" );
-	word *secondword = new word( "verb", "drank" );
-	word *thirdword = new word( "noun", "water" );
-          
-	controller *wordBank = new controller();
-          
-	wordBank->addWord( firstword );
-	wordBank->addWord( secondword );
-	wordBank->addWord( thirdword );
-          
-	std::cout << "--toString called--\n" << std::endl;
 	wordBank->toString();
-	std::cout << "\n--printSentence called--\n" << std::endl;
-	wordBank->printSentence();
-          
-	wordBank->deleteWord( thirdword );
-          
-	std::cout << "\n--Deleting thirdword--" << std::endl;
-	std::cout << "\n--toString called--\n" << std::endl;
-	wordBank->toString();
-	std::cout << "\n--printSentence called--\n" << std::endl;
-	wordBank->printSentence();
-          
-	delete firstword;
-	delete secondword;
-	delete thirdword;
 	break;
       }
   
@@ -167,20 +148,22 @@ int main() {
       break;
 
     case KNOCK_KNOCK:
+      {
+      string punchline = wordBank->findTypeOfWord( "noun" )->content;
       cout << "\nWelcome to the Knock Knock Joke. Please press enter to continue after each statement.";
       cin.ignore();
       cout << "\nKnock knock.";
       cin.ignore();
       cout << "\nWho's there?";
       cin.ignore();
-      cout << "\nrandom word."; //noun
+      cout << punchline;
       cin.ignore();
-      cout << "\nrandom word who?";
+      cout << punchline << " who";
       cin.ignore();
-      cout << "\nrandom word random word.\n"; //adj + noun
+      cout << wordBank->findTypeOfWord( "adjective" )->content << " " <<  punchline << std::endl; //adj + noun
       break;
-      break;
-                
+      //break;
+      }
     case EXIT:
       break; //if the user selects 4, the while loop is stopped and the program ends
     }
