@@ -1,4 +1,3 @@
-LIST OF VERBS
 fix
 present
 repair
@@ -87,8 +86,6 @@ click
 import
 export
 
-
-LIST OF NOUNS
 dog
 cat
 human
@@ -190,8 +187,6 @@ quilt
 giraffe
 yard
 
-
-LIST OF ADJECTIVES
 abounding
 second
 godly
@@ -241,7 +236,6 @@ gray
 superficial
 mysterious
 
-LIST OF ADVERBS
 boldly
 frenetically
 hastily
@@ -312,6 +306,7 @@ thoroughly
 triumphantly
 automatically
 
-
-LIST OF PREPOSTIONS
 with
+
+and
+or
