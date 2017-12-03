@@ -38,7 +38,7 @@ createSentence(numNoun, numAdj, numVerb, numAdv) {
 	if (numNoun == 1) {
 		//get random words by first generating a random number and then traversing through the list to get that word
 		//then add words in this order: 
-		//articleCap, adjective, noun, adverb, verb.
+		//articleCap, adjective, noun, adverb, verb, punct.
 		//for adjectives, first code: if numAdj != 0, 
 		//for adverbs, first code: if numAdv != 0,
 		//for verbs, use a for loop to list them all with conj . then increment verbCount
@@ -49,14 +49,14 @@ createSentence(numNoun, numAdj, numVerb, numAdv) {
 	}
 	if (numNoun == 2) {
 		//same thing but order is:
-		//articleCap, adjective, noun, adverb, verb, article, adjective, noun
+		//articleCap, adjective, noun, adverb, verb, article, adjective, noun, punct.
 	}
 	
 	if (numNoun == 3) {
 		//same thing but order is:
-		//articleCap, adjective, noun, conj, article, adjective, noun, adverb, verb, article, adjective, noun
+		//articleCap, adjective, noun, conj, article, adjective, noun, adverb, verb, article, adjective, noun, punct.
 		//OR
-		//articleCap, adjective, noun, adverb, verb, article, adjective, noun, WITH, article, adjective, noun
+		//articleCap, adjective, noun, adverb, verb, article, adjective, noun, WITH, article, adjective, noun, punct.
 	}
 }
 
@@ -64,7 +64,7 @@ createSentence(numNoun, numAdj, numVerb, numAdv) {
 
 //randomly selects 1 or 2 to determine if the sentence will use singular or plural nouns. 
 bool ifPlural () {
-	randomNumber = (rand() % 2) + 1; //generates num 1-2
+	int randomNumber = (rand() % 2) + 1; //generates num 1-2
 	if (randomNumber == 1) {
 		return false; //use singular nouns
 	}
@@ -75,11 +75,25 @@ bool ifPlural () {
 
 //randomly selects 1 or 2 to determine the article preference in the case of singular nouns
 bool selectArt () {
-	randomNumber = (rand() % 2) + 1; //generates num 1-2
+	int randomNumber = (rand() % 2) + 1; //generates num 1-2
 	if (randomNumber == 1) {
 		return false; //use "a/an"
 	}
 	else {
 		return true; //use "the" 
+	}
+}
+
+//randomly selects 1, 2, or 3 to determine the punctuation of the sentence. 
+word* selectPunct (word *period, word *exclam, word *quest) {
+	int randomNumber = (rand() % 3) + 1; //generates num 1-3
+	if (randomNumber == 1) {
+		return period; //use period
+	}
+	else if (randomNumber == 2) {
+		return exclam; //use exclamation point
+	}
+	else () {
+		return quest; //use question mark
 	}
 }
