@@ -100,7 +100,7 @@ controller::findWord( int index )
   if ( index < 1 )
     return nullptr;
 
-  for ( int i = 0; i < index; ++i )
+  for ( int i = 0; i < index - 1; ++i )
     {
       searcher = searcher->next;
     }
@@ -113,6 +113,7 @@ void
 controller::toString()
 {
   wordList *n = head;
+  int count = 1;
 
   if ( !head && !tail )
     std::cout << "{ empty list }" << std::endl;
@@ -120,9 +121,11 @@ controller::toString()
   else
     {
       while ( n )
-	{	 
-	  std::cout << n->content->content << ": " << n->content->typeOfWord << std::endl;
+	{
+	  
+	  std::cout << count << ": " << n->content->content << ": " << n->content->typeOfWord << std::endl;
 	  n = n->next;
+	  ++count;
 	}
      
     }
@@ -153,7 +156,6 @@ controller::makeWordBank( std::ifstream &file )
 {
 
   std::string str;
-  wordList *currentnode;
   word *currentword;
   
   while ( std::getline( file, str ) && str != "" )
@@ -198,30 +200,31 @@ word*
 controller::findTypeOfWord( std::string typeOfWord )
 {
 
+  
+  
   int randnum = 0;
-  srand ( time ( NULL ) );
   
   if ( !head && !tail )
     return nullptr;
 
   if ( typeOfWord == "verb" )
     {
-      randnum = rand() % 86 + 1;
+      randnum = (rand() % 87) + 1;
     }
 
   if ( typeOfWord == "noun" )
     {
-      randnum = rand() % 99 + 88;
+      randnum = (rand() % 99) + 88;
     }
 
   if ( typeOfWord == "adjective" )
     {
-      randnum = rand() % 47 + 188;
+      randnum = (rand() % 47) + 188;
     }
   
   if ( typeOfWord == "adverb" )
     {
-      randnum = rand() % 68 + 236;
+      randnum = (rand() % 68) + 236;
     }
   
   if ( typeOfWord == "preposition" )
@@ -230,9 +233,12 @@ controller::findTypeOfWord( std::string typeOfWord )
     }
   
   if ( typeOfWord == "conjunction" )
-    {
-      randnum = rand() % 1 + 306;
+    { 
+      randnum = (rand() % 2) + 306;
+      //std::cout << randnum;
     }
+
+  //std::cout << randnum << std::endl;
 
   return findWord( randnum );
      
