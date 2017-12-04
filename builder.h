@@ -5,10 +5,12 @@
 //Abigail Halem
 //Zachary Tsarnas
 //Group Project
-#include <iostream>
 #include <climits>
-#include <cstdlib>
-#include <ctime>
+#include "word.h"
+#include "controller.h"
 
 int menu();
-
+controller *createSentence( int numNoun, int numAdj, int numVerb, int numAdv, controller *wordBank );
+word *selectPunct( word *period, word *exclam, word *quest );
+bool isPlural();
+bool isVowel( word *word );
