@@ -25,14 +25,12 @@ class controller
   //member functions
   int addWord( word *word );
   int deleteWord( word *word );
-  word * findWord( word *word );
+  word * findWord( int index );
+  word * findTypeOfWord( std::string content );
+  void makeWordBank( std::ifstream &file );
   void toString();
   void printSentence();
   
 };
-
-
-
-	   
 
 #endif //CONTROLLER_H_
