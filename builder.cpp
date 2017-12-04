@@ -62,7 +62,7 @@ int main() {
 	  cout << "Do you want a basic sentence (1) or a colorful sentence (2)? ";
 	  cin >> sentType;
 	  //checks input validity
-	  while (cin.fail() || sentType < 1 || numNoun > 2) {
+	  while (cin.fail() || sentType < 1 || sentType > 2) {
 	    cin.clear();
 	    cin.ignore(INT_MAX, '\n');
 	    cout << "\nPlease input a valid number (1-2): ";
@@ -123,17 +123,7 @@ int main() {
       }
       
     case MAD_LIBS:
-      cout << "\nPlease choose one of the following: ";
-      cout << "\n1. Random mad libs";
-      cout << "\n2. Pre-generated mad libs";
-      cout << "\n\nChoice: ";
-      cin >> choice;
-
-      if (choice == 1) {
-	//random mad libs
-      }
-			
-      else if (choice == 2) {
+      {	
 	cout << "\nWelcome to the Mad Libs Game. Please select the corresponding integer to the categories below.";
 	cout << "\n1. Holiday";
 	cout << "\n2. UF";
@@ -141,6 +131,14 @@ int main() {
 	cout << "\n\nChoice: ";
 	int madchoice = 0;
 	cin >> madchoice;
+
+	//checks input validity
+	while (cin.fail() || madchoice < 1 || madchoice > 3) {
+	  cin.clear();
+	  cin.ignore(INT_MAX, '\n');
+	  cout << "\nPlease input a valid number (1-3): ";
+	  cin >> madchoice;
+	}
 
 	string word1="";
 	string word2="";
@@ -225,18 +223,12 @@ int main() {
 	  cout << "\nbecause he had an injured costumer.\n";
 	}
 
-	else if (madchoice > 3 || madchoice < 1){
-          cout << "\nPlease enter a valid number";
-	  cin >> madchoice;
-	}
-      }
-	
-      else if (choice > 2 || choice < 1) {
-	cout << "\nPlease enter a valid number";
-	cin >> choice;
-      }
-      break;
 
+      
+	
+     
+      break;
+    }
     case KNOCK_KNOCK:
       {
 	srand( time ( NULL ) );
