@@ -3,7 +3,7 @@ Project group 34 - Natural Language Processing
 ## Hi everyone!
 **The program now compliles and builds.** Use the command:  
 
-`g++ -o main -Wall -std=c++11 builder.cpp controller.cpp word.cpp WordSubclassess.cpp`    
+`g++ -o main -Wall -std=c++11 builder.cpp controller.cpp word.cpp WordSubclasses.cpp`    
 
 to create a file named "main" and run it with    
 
