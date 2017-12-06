@@ -1,5 +1,7 @@
 # Term-Project-COP3503
 Project group 34 - Natural Language Processing
+# IT'S OVER
+### Thanks for everyone's help. The master branch now holds the complete project. This build will be used in the presentation on thursday, if everyone is happy with it. Have a good break.
 ## Hi everyone!
 **The program now compliles and builds.** Use the command:  
 
